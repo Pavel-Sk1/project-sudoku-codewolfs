@@ -10,19 +10,28 @@ function read() {
    */
 }
 
-function solve() {
+function renderBoard(boards, numQuest) {
+let strOfBoard = boards[numQuest];
+let arrOfBoard =  strOfBoard.match(/.{9}/g);
+arrOfBoard = arrOfBoard.map((elem) => elem.split(``));
+return arrOfBoard;
+}
+
+
+
+function solve(board) {
   /**
    * Принимает игровое поле в том формате, в котором его вернули из функции read.
    * Возвращает игровое поле после попытки его решить.
    */
-}
+}  
 
 function isSolved() {
   /**
    * Принимает игровое поле в том формате, в котором его вернули из функции solve.
    * Возвращает булевое значение — решено это игровое поле или нет.
    */
-}
+} 
 
 function prettyBoard() {
   /**
