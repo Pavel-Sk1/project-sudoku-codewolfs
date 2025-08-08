@@ -1,5 +1,5 @@
 const renderBoard = require('../sudoku.js')
-const sudoku = require('../sudoku.js');
+
 
 
 describe('renderBoard', () => { 
