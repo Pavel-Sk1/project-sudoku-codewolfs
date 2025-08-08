@@ -78,12 +78,12 @@ function solve(board) {
 
 
 
-function isSolved() {
+// function isSolved() {
   /**
    * Принимает игровое поле в том формате, в котором его вернули из функции solve.
    * Возвращает булевое значение — решено это игровое поле или нет.
    */
-} 
+// } 
 
 function prettyBoard(solvedBoard) {
   const solvedArrBoard = solvedBoard.map((el) => el.join(' '))
@@ -96,4 +96,4 @@ function prettyBoard(solvedBoard) {
    */
 }
 
-module.exports = { read, solve, isSolved, prettyBoard, renderBoard }
+module.exports = { read, solve, prettyBoard, renderBoard }
