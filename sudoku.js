@@ -85,7 +85,10 @@ function isSolved() {
    */
 } 
 
-function prettyBoard() {
+function prettyBoard(solvedBoard) {
+  const solvedArrBoard = solvedBoard.map((el) => el.join(' '))
+  const solvedStrBoard = solvedArrBoard.join('\n')
+  return solvedStrBoard
   /**
    * Принимает игровое поле в том формате, в котором его вернули из функции solve.
    * Выводит в консоль/терминал судоку.
@@ -93,4 +96,4 @@ function prettyBoard() {
    */
 }
 
-module.exports = { read, solve, isSolved, prettyBoard}
+module.exports = { read, solve, isSolved, prettyBoard }
