@@ -2,7 +2,8 @@ const fs = require('fs')
 
 function read() {
   const strSudoku = fs.readFileSync('./puzzles.txt', 'utf-8')
-  const arrSudoku = strSudoku.split('\r\n')
+  const arrSudoku = strSudoku.split('\r\n');
+  arrSudoku.pop();
   return arrSudoku   
   /**
    * Прочесть файл puzzles.txt в кодировке 'utf-8' и вернуть эти данные из функции
