@@ -96,4 +96,4 @@ function prettyBoard(solvedBoard) {
    */
 }
 
-module.exports = { read, solve, isSolved, prettyBoard }
+module.exports = { read, solve, isSolved, prettyBoard, renderBoard }
