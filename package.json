@@ -7,6 +7,7 @@
     "start": "node runner.js",
     "test": "jest"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Elbrus-Bootcamp/project-sudoku.git"
