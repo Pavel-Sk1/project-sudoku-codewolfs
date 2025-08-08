@@ -1,7 +1,17 @@
 // Используйте для решения судоку необходимые функции из файла sudoku.js
-const { read, solve, isSolved, prettyBoard, renderBoard } = require('./sudoku')
+const { read, solve, prettyBoard, renderBoard } = require('./sudoku')
 
-const realNumQuest = process.argv[2];
-let indexQuest = +realNumQuest - 1;
-if ((indexQuest < 0) || (indexQuest > 14)) console.log(`Введите № задачи от 1 до 15`);
+function resolveSudoku () {
+    const realNumQuest = Number(process.argv[2]);
+    const indexQuest = realNumQuest - 1;
+    if ((indexQuest < 0) || (indexQuest > 14) || (isNaN(indexQuest))) return console.log(`Введите № задачи от 1 до 15`);
+    const allStrBoards = read();
+    const currentBoard = renderBoard(allStrBoards, indexQuest);
+    solve(currentBoard);
+    const solvedStrBoard = prettyBoard(currentBoard);
+    return console.log(solvedStrBoard)
+}
+resolveSudoku ()
+
+
 
